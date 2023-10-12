@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import './Home.css'
 
-import './App.css'
-
-function App() {
-  return 
-  <></>
+function Home() {
+  
+  return (
+ <h1>Hi, this is the frontend</h1>
+  )
 }
 
-export default App
+export default Home
