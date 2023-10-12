@@ -17,4 +17,4 @@ return (
   );
 };
 
-export default Contacts;
+export default Contacts
