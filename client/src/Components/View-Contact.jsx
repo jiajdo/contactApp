@@ -3,7 +3,11 @@ import React from 'react'
 
 const ViewContact = () => {
   return (
-    <div>Hello from ViewContact</div>
+    <div>
+        <div>{contacts.name}</div>
+        <div>{contacts.email}</div>
+
+    </div>
   )
 }
 
