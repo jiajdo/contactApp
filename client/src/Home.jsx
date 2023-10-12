@@ -15,14 +15,15 @@ function Home() {
       id: "2",
       name: "Alex",
       email: "alex@gmail.com",
-    },
+    }
   ];
 
   return (
     <>
-      <Contacts />
+     
       <CreateContact />
-      <ViewContact />
+      <ViewContact  />
+      <Contacts contacts={contacts} />
     </>
   );
 }

@@ -13,7 +13,7 @@ const CreateContact = () => {
       <input type="text" name="phone" placeholder="Phone"/>
       <label>Notes</label>
       <input type="text" name="notes" placeholder="Notes"/>
-      <button>Add</button>
+      <button style={{backgroundColor: 'lightgreen', fontWeight: 'bold', padding: 4}}>Add</button>
       </form>
     </div>
     

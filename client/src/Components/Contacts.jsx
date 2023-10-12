@@ -1,10 +1,18 @@
 // Renders a list with all your contacts.
 import { useState } from "react";
+import ViewContact from "./View-Contact";
 
-const Contacts = () => {
+
+
+const Contacts = (props) => {
+const renderContacts = props.contacts.map((contact) => {
+return (
+   <ViewContact contact={contact}></ViewContact>
+)
+})
   return (
-    <div className="Header">
-      <h1>Contact List</h1>
+    <div>
+      {renderContacts}
     </div>
   );
 };
