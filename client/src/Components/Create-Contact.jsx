@@ -2,7 +2,7 @@
 
 const CreateContact = () => {
 
-const [contacts, setContacts] = useState()
+const [contacts, setContacts] = useState([])
 
 const getRequest = () => {
     fetch("http://localhost:8080/contacts")
@@ -16,6 +16,10 @@ const getRequest = () => {
         console.log("Contacts fetched...",contacts);
       });
   };
+
+  useEffect(() => {
+    getRequest();
+  }, []);
 
 const handleSubmit = (e) =>{
     e.preventDefault()
