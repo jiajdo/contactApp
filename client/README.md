@@ -1,8 +1,22 @@
-# React + Vite
+# Contact List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Organize your contacts' name, email, phone number, and notes. Add, edit, and delete your contacts.
 
-Currently, two official plugins are available:
+# Built With
+*Postgres
+*Express
+*React
+*Node
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# NPM Libraries
+*body-parser
+*cors
+*dotenv
+*express
+*nodemon
+*pg
+
+
+
+
+
