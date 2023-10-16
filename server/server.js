@@ -52,6 +52,7 @@ app.post("/createContact", async (req, res) => {
     }
   });
 
+  //delete contacts
   app.post("/delete", async (req, res) => {
     try {
         const deleteContact = {
