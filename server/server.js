@@ -52,17 +52,18 @@ app.post("/createContact", async (req, res) => {
     }
   });
 
-  app.post("/api/delete", async (req, res) => {
+  app.post("/delete", async (req, res) => {
     try {
-      const deleteEvent = {
-        title: req.body.title,
-        location: req.body.location,
-        eventtime: req.body.eventtime,
-      };
-      const deleteResult = await db.query(
-        "DELETE FROM events WHERE title=$1 AND location=$2 AND eventtime=$3 RETURNING *",
-        [deleteEvent.title, deleteEvent.location, deleteEvent.eventtime]
-      );
+        const deleteContact = {
+          name: req.body.name,
+          email:  req.body.email,
+          phone: req.body.phone,
+          notes: req.body.notes
+        };
+        const deleteResult = await db.query(
+          "DELETE FROM contacts WHERE name=$1 AND email=$2 AND phone=$3 AND notes=$4 RETURNING *",
+          [deleteContact.name, deleteContact.email, deleteContact.phone, deleteContact.notes]
+        );
       let response = deleteResult.rows[0];
       console.log(response);
       res.json(response);
