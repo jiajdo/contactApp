@@ -15,6 +15,22 @@ app.get('/', (req,res)=> {
     res.send("Your home page works!");
 })
 
+app.get("/contacts", async(req, res) => {
+    try {
+        const {rows: contacts} = await db.query (`SELECT * FROM contacts`)
+        console.log({contacts})
+        res.send(contacts)
+    }
+    catch(e) {
+        console.log(e)
+        return res.status(400).json({error})
+
+    }
+})
+
+
+
+
 app.listen(PORT, () => {
     console.log(`Your man is at ${PORT}`)
 })

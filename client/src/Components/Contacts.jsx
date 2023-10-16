@@ -1,20 +1,15 @@
-// Renders a list with all your contacts.
+//Renders a list with all contacts
+
 import { useState } from "react";
 import ViewContact from "./View-Contact";
 
-
-
 const Contacts = (props) => {
-const renderContacts = props.contacts.map((contact) => {
-return (
-   <ViewContact contact={contact}></ViewContact>
-)
-})
-  return (
-    <div>
-      {renderContacts}
-    </div>
-  );
+    console.log({props}, 'contacts props')
+  const renderContacts = props.contacts.map((contact) => {
+    console.log({contact})
+    return <ViewContact contact={contact}></ViewContact>;
+  });
+  return <div>{renderContacts}</div>;
 };
 
-export default Contacts
+export default Contacts;

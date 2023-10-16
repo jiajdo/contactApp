@@ -1,9 +1,13 @@
 // Renders the info of ONE individual contact
 import React from "react";
 
-
 const ViewContact = (props) => {
-   const {id, name, email} = props.contact  
+  console.log({ props });
+  if (!props.contact) {
+    return <div></div>;
+  }
+  const { id, name, email } = props.contact;
+
   return (
     <div>
       <div>{name}</div>
